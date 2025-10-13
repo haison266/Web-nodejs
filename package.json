@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon --inspect src/app.js",
+    "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,11 +19,13 @@
   },
   "homepage": "https://github.com/haison266/Web-nodejs#readme",
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3"
   },
   "devDependencies": {
     "morgan": "^1.10.1",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "sass": "^1.93.2"
   }
 }
