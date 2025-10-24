@@ -1,40 +1,40 @@
 {
-  "name": "web-nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/app.js",
-  "scripts": {
-    "start": "nodemon --inspect src/app.js",
-    "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/haison266/Web-nodejs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/haison266/Web-nodejs/issues"
-  },
-  "homepage": "https://github.com/haison266/Web-nodejs#readme",
-  "lint-staged": {
-    "Web-nodejs/src/**/*.{js,json,scss}": [
-      "prettier --single-quote --trailing-coma es5 --tab-width 4 --write"
-    ]
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.8",
-    "express": "^5.1.0",
-    "express-handlebars": "^8.0.3"
-  },
-  "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "morgan": "^1.10.1",
-    "nodemon": "^3.1.10",
-    "prettier": "^3.6.2",
-    "sass": "^1.93.2"
-  }
+    "name": "web-nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "nodemon --inspect src/app.js",
+        "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css ",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/haison266/Web-nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/haison266/Web-nodejs/issues"
+    },
+    "homepage": "https://github.com/haison266/Web-nodejs#readme",
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx,json,scss,md,html}": [
+            "prettier --single-quote --trailing-coma es5 --tab-width 4 --write"
+        ]
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.8",
+        "express": "^5.1.0",
+        "express-handlebars": "^8.0.3"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.6",
+        "morgan": "^1.10.1",
+        "nodemon": "^3.1.10",
+        "prettier": "^3.6.2",
+        "sass": "^1.93.2"
+    }
 }
