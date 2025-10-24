@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/haison266/Web-nodejs#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": [
+    "Web-nodejs/src/**/*.{js,json,scss}": [
       "prettier --single-quote --trailing-coma es5 --tab-width 4 --write"
     ]
   },
