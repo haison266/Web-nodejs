@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
 
 # Lệnh này sẽ chạy lint-staged, và lint-staged sẽ thực hiện các tác vụ bạn định nghĩa
 npx lint-staged
