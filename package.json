@@ -21,8 +21,15 @@
     "homepage": "https://github.com/haison266/Web-nodejs#readme",
     "lint-staged": {
         "**/*.{js,,ts,tsx,json,scss,,html}": [
-            "prettier --single-quote --trailing-comma es5 --tab-width 4 --write"
+            "prettier --write"
         ]
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "printWidth": 120,
+        "endOfLine": "lf"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
