@@ -20,7 +20,7 @@
     },
     "homepage": "https://github.com/haison266/Web-nodejs#readme",
     "lint-staged": {
-        "**/*.{js,,ts,tsx,json,scss,,html}": [
+        "**/*.{js,ts,tsx,json,scss,,html}": [
             "prettier --write"
         ]
     },
