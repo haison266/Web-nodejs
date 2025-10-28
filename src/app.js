@@ -6,10 +6,16 @@ const app = express();
 const port = 3000;
 const engine = exphbs.engine;
 const route = require('./routes/');
+const db = require('./config/db');
 
+// Connect to the database
+db.connect().then(() => {
+    require('./app/model/Courses'); // register model
+    const route = require('./routes'); // require routes after models are registered
+    route(app);
+});
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.json());
 
 //HTTP logger
