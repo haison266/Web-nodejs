@@ -1,0 +1,25 @@
+
+{{!-- 
+It's a course creation form that allows users to input details for a new course
+The form submits data via POST method to the "courses/store" endpoint
+ --}}
+<div class="mt-4">
+    <h3>Create a courses</h3>
+    <form method="POST" action="/courses/store">
+        <div class="form-group">
+            <label for="name">Enter your tilte</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter title">
+        </div>
+        <div>
+            <label for="decription">Description</label>
+            <input type="description" class="form-control" id="description" placeholder="Enter description">
+        </div>
+            <label for="image">Input your thumbnail</label>
+            <input type="image" class="form-control" id="image" placeholder="Enter image link">
+        <div>
+            <label for="video">Video source</label>
+            <input type="video" class="form-control" id="video" placeholder="Enter video link">
+        </div>
+        <button type="submit" class="btn btn-primary"></button>
+    </form>
+</div>
