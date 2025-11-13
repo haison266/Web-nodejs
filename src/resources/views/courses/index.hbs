@@ -1,0 +1,20 @@
+{{!-- simple list of courses --}}
+<div class="container mt-4">
+  <h1>Courses</h1>
+  <div class="row">
+    {{#each courses}}
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          {{#if this.image}}
+            <img src="{{this.image}}" class="card-img-top" alt="{{this.name}}">
+          {{/if}}
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="/courses/{{this.slug}}" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <div class="alert alert-success">{{message}}</div>
+
+  {{#if course}}
+    <h2>{{course.name}}</h2>
+    {{#if course.image}}
+      <img src="{{course.image}}" alt="{{course.name}}" class="img-fluid mb-3" />
+    {{/if}}
+    <p>{{course.description}}</p>
+    <p><strong>Video ID:</strong> {{course.videoId}}</p>
+  {{/if}}
+
+  <a href="/courses" class="btn btn-primary mt-3">Back to courses</a>
+</div>

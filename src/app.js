@@ -7,25 +7,34 @@ const port = 3000;
 const engine = exphbs.engine;
 const route = require('./routes/');
 const db = require('./config/db');
+const methodOverride = require('method-override');
 
-// Connect to the database
-db.connect().then(() => {
-    require('./app/model/Courses'); // register model
-    const route = require('./routes'); // require routes after models are registered
-    route(app);
-});
+// Middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 //HTTP logger
 app.use(morgan('combined'));
+
+// Connect to the database
+db.connect()
+    .then(() => {
+        console.log('Connected to database');
+    })
+    .catch((err) => {
+        console.error('Database connection error:', err);
+    });
 
 //Template engine
 app.engine(
     'hbs',
     engine({
         extname: '.hbs',
+        helpers: {
+            sum: (a, b) => a + b,
+        },
     })
 );
 app.set('view engine', 'hbs');

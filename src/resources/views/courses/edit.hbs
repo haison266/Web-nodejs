@@ -1,0 +1,23 @@
+ {{!--Edit page--}}
+<div class="mt-4">
+    <h3>Edit Course</h3>
+    {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+    <form method="POST" action="/courses/{{course._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="name">Course Title</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter title" required value="{{#if formData.name}}{{formData.name}}{{else}}{{course.name}}{{/if}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Enter description" required>{{#if formData.description}}{{formData.description}}{{else}}{{course.description}}{{/if}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoId">YouTube Video ID</label>
+            <input type="text" class="form-control" id="videoId" name="videoId" placeholder="Enter YouTube video ID" required value="{{#if formData.videoId}}{{formData.videoId}}{{else}}{{course.videoId}}{{/if}}">
+            <small class="form-text text-muted">Enter the YouTube video ID (e.g., for https://www.youtube.com/watch?v=ABC123, enter ABC123)</small>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Update</button>
+    </form>
+</div>
